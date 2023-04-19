@@ -17,7 +17,7 @@ import random
 
 # Brain should be defined by default
 brain=Brain()
-
+# mock change so that github will let me commit lol
 # Robot configuration code
 left_drive_smart1 = Motor(Ports.PORT1, GearSetting.RATIO_18_1, False)
 right_drive_smart1 = Motor(Ports.PORT11, GearSetting.RATIO_18_1, True)
