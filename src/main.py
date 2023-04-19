@@ -18,9 +18,16 @@ import random
 # Brain should be defined by default
 brain=Brain()
 
-# Begin project code
-while True:
+# defining ports
 
+# defining functions
+
+# defining variables
+
+# Begin project code
+
+while True:
+    # behaviors 
 
     # Clear the screen and set the cursor to top left corner on each loop
     brain.screen.clear_screen()
