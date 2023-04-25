@@ -20,32 +20,32 @@ brain=Brain()
 # mock change so that github will let me commit lol
 # Robot configuration code
 left_drive_smart1 = Motor(Ports.PORT1, GearSetting.RATIO_18_1, False)
-right_drive_smart1 = Motor(Ports.PORT11, GearSetting.RATIO_18_1, True)
+right_drive_smart1 = Motor(Ports.PORT9, GearSetting.RATIO_18_1, True)
 drivetrain1 = DriveTrain(left_drive_smart1, right_drive_smart1, 319.19, 295, 40, MM, 1)
-left_drive_smart2 = Motor(Ports.PORT2, GearSetting.RATIO_18_1, False)
-right_drive_smart2 = Motor(Ports.PORT12, GearSetting.RATIO_18_1, True)
+left_drive_smart2 = Motor(Ports.PORT12, GearSetting.RATIO_18_1, False)
+right_drive_smart2 = Motor(Ports.PORT11, GearSetting.RATIO_18_1, True)
 drivetrain2 = DriveTrain(left_drive_smart2, right_drive_smart2, 319.19, 295, 40, MM, 1)
 optical = Optical(Ports.PORT15)
 distance = Distance(Ports.PORT19)
 
 #drivetrain merge functions
-def drivetrainsTurn(dir, speed):
-    '''first var: direction,
+def drivetrainsTurn(direction, speed):
+    '''first var: directionection,
     values: LEFT, RIGHT
     
     second var speed, 
     values: any int 1-100, measured as percentage'''
-    drivetrain1.turn(dir, speed, PERCENT)
-    drivetrain2.turn(dir, speed, PERCENT)
+    drivetrain1.turn(direction, speed, PERCENT)
+    drivetrain2.turn(direction, speed, PERCENT)
 
-def drivetrainsDrive(dir, speed):
-    '''first var: direction, 
+def drivetrainsDrive(direction, speed):
+    '''first var: directionection, 
     values: FORWARD, REVERSE
     
     second var: speed, 
     values: any int 1-100, measured as percentage'''
-    drivetrain1.drive(dir, speed, PERCENT)
-    drivetrain2.turn(dir, speed, PERCENT)
+    drivetrain1.drive(direction, speed, PERCENT)
+    drivetrain2.turn(direction, speed, PERCENT)
 
 # Begin project code
 count = 0
